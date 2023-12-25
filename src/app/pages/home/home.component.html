@@ -1,0 +1,23 @@
+<div class="pb-5">
+    <div class="flex justify-center flex-wrap  gap-5">
+
+        @for (item of recipe; track 1) {
+        <app-card/> } @empty {
+        <div>
+            No Recipe are avilable
+        </div>
+        }
+
+
+    </div>
+
+    <div class="fixed bottom-10 right-10">
+
+        <button mat-fab color="primary">
+            <mat-icon class="bg-orange-600" (click)="opencreateproductfrom()">add</mat-icon>
+
+        </button>
+    </div>
+
+
+</div>

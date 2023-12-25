@@ -1,0 +1,38 @@
+<form class="w-[27rem] p-6 rounded-lg shadow-md" (ngSubmit)="onSubmit()">
+
+    <div class="mb-4">
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">Title</mat-label>
+            <input matInput placeholder="Ex. Pizza" name="title" [(ngModel)]="recipe.title">
+        </mat-form-field>
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">Description</mat-label>
+
+            <input matInput placeholder="Ex. Pizza" name="description" [(ngModel)]="recipe.description">
+        </mat-form-field>
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">food type</mat-label>
+            <input matInput placeholder="Ex. Pizza" name="foodtype" [(ngModel)]="recipe.foodtype">
+        </mat-form-field>
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">
+                image </mat-label>
+            <input matInput placeholder="Ex. Pizza" name="image" [(ngModel)]="recipe.image">
+        </mat-form-field>
+
+
+
+
+
+    </div>
+
+    <div>
+        <button mat-button color="primary">
+            Create 
+        </button>
+    </div>
+</form>

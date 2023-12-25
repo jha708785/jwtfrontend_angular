@@ -1,0 +1,41 @@
+<p>
+    <mat-toolbar class="flex items-center justify-between" style="justify-content: space-between;" color="primary">
+        <div>
+            <div class="example-button-container">
+                <button color="white" aria-label="Example icon button with a home icon">
+                  <mat-icon class="py-1">home</mat-icon>
+                  <span class="px-2">My App</span>
+                 </button>
+
+            </div>
+
+        </div>
+
+
+        <div>
+            @if (user!=null) {
+            <div>
+                <button (click)="handlelogout()" mat-button>
+                  
+                        {{user.firstname}}
+               
+                             </button >
+    
+                             
+                <button (click)="handlelogout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon><i class="fa fa-sign-in" aria-hidden="true"></i></mat-icon>
+      </button>
+            </div>
+            } @else {
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon><i class="fa fa-sign-in" aria-hidden="true"></i></mat-icon>
+                  </button> }
+
+
+
+
+        </div>
+
+
+    </mat-toolbar>
+</p>

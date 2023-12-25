@@ -1,0 +1,107 @@
+<div class="flex justify-center h-screen items-center overflow-hidden">
+
+    <div class="container">
+
+        <div class="cover" [ngClass]="{'route-active':isRegester}">
+
+            <div class="front">
+                <img src="/src/assets/img/download (1).jpg" alt="">
+                <div class="text">
+
+                    <span class="text-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, id?</span>
+                    <span class="text-2">Lorem ipsum dolor sit.</span>
+                </div>
+            </div>
+
+            <div class="back">
+                <img src="/src/assets/img/download.jpg" alt="">
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="from h-full">
+            <div class="form-content h-full">
+
+                <div class="login-from">
+
+
+                    <form [formGroup]="regesterfrom" class="w-[27rem] p-6 rounded-lg shadow-md" (ngSubmit)="handleReg()">
+
+                        <h1 class="text-lg font-bold text-center pb-8">Sign up</h1>
+                        <div class="mb-4">
+
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">FirstName</mat-label>
+                                <input matInput placeholder="full name" name="title" formControlName="firstname">
+                            </mat-form-field>
+
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Email</mat-label>
+
+                                <input matInput placeholder="email" name="description" formControlName="email">
+                            </mat-form-field>
+
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Pasword</mat-label>
+                                <input matInput placeholder="password" name="foodtype" formControlName="password">
+                            </mat-form-field>
+
+                        </div>
+
+                        <div>
+                            <button class="w-full" mat-raised-button color="primary" type="submit">
+                                regester
+                            </button>
+                        </div>
+                    </form>
+
+
+                    <div class="flex items-center justify-center gap-2 mt-9 ">
+                        Dont have account ? <button mat-button color="primary" (click)="toggle()">Login</button>
+                    </div>
+                </div>
+
+
+                <div class="signup-from">
+
+
+                    <form [formGroup]="loginfrom" (ngSubmit)="handleLogin()">
+
+                        <h1 class="text-lg font-bold text-center pb-8">Login </h1>
+                        <div class="mb-4">
+
+
+
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Email</mat-label>
+
+                                <input matInput placeholder="email" name="description" formControlName="email">
+                            </mat-form-field>
+
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Pasword</mat-label>
+                                <input matInput placeholder="password" name="foodtype" formControlName="password">
+                            </mat-form-field>
+
+                        </div>
+
+                        <div>
+                            <button class="w-full" mat-raised-button color="primary" type="submit">
+                                LOGIN
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="flex items-center justify-center gap-2 mt-9 ">
+                        Dont have account ? <button mat-button color="primary" (click)="toggle()">Sigin</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
